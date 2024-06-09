@@ -24,13 +24,14 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@ui/*": ["src/components/ui/*"],
       "@utils/*": ["src/utils/*"],
       "@hooks/*": ["src/hooks/*"],
       "@pages/*": ["src/pages/*"],
       "@services/*": ["src/services/*"],
       "@types/*": ["src/types/*"],
-      "@contexts/*": ["src/contexts/*"],
-      "@firebase/*": ["src/services/firebase/*"]
+      "@contexts/*": ["src/contexts/*"]
     }
   },
   "include": ["src"],
