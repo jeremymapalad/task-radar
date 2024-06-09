@@ -1,5 +1,5 @@
 import { PropsWithChildren, useEffect } from "react";
-import { useAuth } from "../contexts/authContext";
+import { useAuth } from "@contexts/authContext";
 import { useNavigate } from "react-router-dom";
 
 interface RouteGuardProps extends PropsWithChildren {

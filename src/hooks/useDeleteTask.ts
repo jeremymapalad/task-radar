@@ -1,7 +1,7 @@
 import { deleteDoc, doc } from "firebase/firestore";
 import { useState } from "react";
-import { db } from "../services/firebase/firebase";
-import { TASK_COLLECTION } from "../utils/constants";
+import { db } from "@services/firebase/firebase";
+import { TASK_COLLECTION } from "@utils/constants";
 
 const useDeleteTask = () => {
   const [loading, setLoading] = useState<boolean>(false);

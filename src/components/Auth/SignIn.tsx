@@ -1,4 +1,4 @@
-import { loginWithEmail } from "../../services/firebase/auth";
+import { loginWithEmail } from "@services/firebase/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import AuthForm from "./AuthForm";
@@ -29,9 +29,9 @@ const SignIn = () => {
       onSubmit={onSubmit}
     >
       <p className="text-gray-500 text-center text-sm font-light">
-        Don't have an account?
+        Don't have an account?{" "}
         <Link
-          className="text-primary-600 font-medium hover:underline"
+          className="text-primary-600 font-medium underline hover:opacity-80"
           to="/sign-up"
         >
           Sign up

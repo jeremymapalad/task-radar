@@ -1,4 +1,4 @@
-import { logout } from "../../services/firebase/auth";
+import { logout } from "@services/firebase/auth";
 
 const SignOut = () => {
   return (

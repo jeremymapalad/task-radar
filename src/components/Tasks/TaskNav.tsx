@@ -1,4 +1,4 @@
-import { useAuth } from "../../contexts/authContext";
+import { useAuth } from "@contexts/authContext";
 import SignOut from "../Auth/SignOut";
 
 const TaskNav = () => {

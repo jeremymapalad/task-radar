@@ -1,6 +1,6 @@
 import { FormEvent, PropsWithChildren, useState } from "react";
-import TextInput from "../ui/TextInput";
-import Button from "../ui/Button";
+import TextInput from "@ui/TextInput";
+import Button from "@ui/Button";
 
 interface AuthFormProps extends PropsWithChildren {
   onSubmit: (email: string, password: string) => Promise<boolean>;

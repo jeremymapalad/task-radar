@@ -1,12 +1,12 @@
-import Dropdown from "../ui/Dropdown";
-import Button from "../ui/Button";
 import { useState } from "react";
-import { OPTIONS } from "../../utils/constants";
-import { Task } from "../../types/Task";
-import { displayFirebaseDate } from "../../utils/helpers";
+import Dropdown from "@ui/Dropdown";
+import Button from "@ui/Button";
+import { OPTIONS } from "@utils/constants";
+import { Task } from "@/types/Task";
+import { displayFirebaseDate } from "@utils/helpers";
 import { TrashIcon } from "@heroicons/react/24/solid";
-import useDeleteTask from "../../hooks/useDeleteTask";
-import useUpdateTask from "../../hooks/useUpdateTask";
+import useDeleteTask from "@hooks/useDeleteTask";
+import useUpdateTask from "@hooks/useUpdateTask";
 
 const TaskItem = ({ id, label, status, createdAt }: Task) => {
   const { deleteTask } = useDeleteTask();

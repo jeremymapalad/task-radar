@@ -1,6 +1,6 @@
 import Button from "./Button";
 import { useState } from "react";
-import { getButtonClassNames } from "../../utils/helpers";
+import { getButtonClassNames } from "@utils/helpers";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 interface DropdownProps {

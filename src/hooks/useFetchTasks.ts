@@ -8,10 +8,10 @@ import {
   where,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { TASK_COLLECTION } from "../utils/constants";
-import { Task } from "../types/Task";
-import { db } from "../services/firebase/firebase";
-import { useAuth } from "../contexts/authContext";
+import { TASK_COLLECTION } from "@utils/constants";
+import { Task } from "@/types/Task";
+import { db } from "@services/firebase/firebase";
+import { useAuth } from "@contexts/authContext";
 
 const useFetchTasks = () => {
   const { userId } = useAuth();

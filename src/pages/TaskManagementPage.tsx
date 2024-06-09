@@ -1,8 +1,8 @@
 import { useState } from "react";
-import TaskList from "../components/Tasks/TaskList";
-import TaskToolbar from "../components/Tasks/TaskToolbar";
-import useFetchTasks from "../hooks/useFetchTasks";
-import TaskNav from "../components/Tasks/TaskNav";
+import TaskList from "@components/Tasks/TaskList";
+import TaskToolbar from "@components/Tasks/TaskToolbar";
+import useFetchTasks from "@hooks/useFetchTasks";
+import TaskNav from "@components/Tasks/TaskNav";
 
 const TaskManagementPage = () => {
   const { tasks, sortByDate } = useFetchTasks();

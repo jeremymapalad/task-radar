@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Timestamp, addDoc, collection } from "firebase/firestore";
-import { db } from "../services/firebase/firebase";
-import { TASK_COLLECTION, TO_DO } from "../utils/constants";
-import { useAuth } from "../contexts/authContext";
+import { db } from "@services/firebase/firebase";
+import { TASK_COLLECTION, TO_DO } from "@utils/constants";
+import { useAuth } from "@contexts/authContext";
 
 const useCreateTask = () => {
   const { userId } = useAuth();

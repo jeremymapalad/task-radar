@@ -1,4 +1,4 @@
-import { registerWithEmail } from "../../services/firebase/auth";
+import { registerWithEmail } from "@services/firebase/auth";
 import { useState } from "react";
 import AuthForm from "./AuthForm";
 

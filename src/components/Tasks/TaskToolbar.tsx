@@ -1,6 +1,6 @@
-import TextInput from "../ui/TextInput";
-import Button from "../ui/Button";
-import useCreateTask from "../../hooks/useCreateTask";
+import TextInput from "@ui/TextInput";
+import Button from "@ui/Button";
+import useCreateTask from "@hooks/useCreateTask";
 import { FormEvent, useState } from "react";
 import { ArrowsUpDownIcon, PlusCircleIcon } from "@heroicons/react/24/solid";
 

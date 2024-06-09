@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import TaskManagementPage from "./pages/TaskManagementPage.tsx";
-import SignInPage from "./pages/SignInPage.tsx";
-import SignUpPage from "./pages/SignUpPage.tsx";
-import { AuthProvider } from "./contexts/authContext.tsx";
-import RouteGuard from "./components/RouteGuard.tsx";
+import TaskManagementPage from "@pages/TaskManagementPage.tsx";
+import SignInPage from "@pages/SignInPage.tsx";
+import SignUpPage from "@pages/SignUpPage.tsx";
+import { AuthProvider } from "@contexts/authContext.tsx";
+import RouteGuard from "@components/RouteGuard.tsx";
 
 const router = createBrowserRouter([
   {

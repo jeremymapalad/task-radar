@@ -1,5 +1,5 @@
-import { Task } from "../../types/Task";
-import { isArrayEmpty } from "../../utils/helpers";
+import { Task } from "@/types/Task";
+import { isArrayEmpty } from "@utils/helpers";
 import TaskItem from "./TaskItem";
 
 interface TaskListProps {

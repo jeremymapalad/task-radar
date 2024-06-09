@@ -5,9 +5,9 @@ import React, {
   useState,
   PropsWithChildren,
 } from "react";
-import { auth } from "../services/firebase/firebase";
+import { auth } from "@services/firebase/firebase";
 import { onAuthStateChanged, UserInfo } from "firebase/auth";
-import { User } from "../types/User";
+import { User } from "@/types/User";
 
 interface AuthProviderProps extends PropsWithChildren {}
 
