@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Dropdown from "@ui/Dropdown";
 import Button from "@ui/Button";
-import { OPTIONS } from "@utils/constants";
+import { STATUS } from "@utils/constants";
 import { Task } from "@/types/Task";
 import { displayFirebaseDate } from "@utils/helpers";
-import { TrashIcon, PlusIcon } from "@heroicons/react/24/solid";
+import { TrashIcon } from "@heroicons/react/24/solid";
 import useDeleteTask from "@hooks/useDeleteTask";
 import useUpdateTask from "@hooks/useUpdateTask";
 import SubTask from "./SubTask";
@@ -34,7 +34,7 @@ const TaskItem = ({ id, label, status, createdAt }: Task) => {
 
         <div className="mt-4 pt-4 border-slate-300 border-t-4 flex justify-between">
           <Dropdown
-            options={OPTIONS}
+            options={Object.values(STATUS)}
             defaultValue={currentStatus}
             onClick={handleOnChangeStatus}
           />
