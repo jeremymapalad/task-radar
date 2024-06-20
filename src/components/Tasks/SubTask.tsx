@@ -8,7 +8,7 @@ function SubTask() {
     <>
       <ul>
         {SAMPLE_SUBTASK_LIST.map((subtask, i) => {
-          return <SubTaskItem label={subtask} />;
+          return <SubTaskItem key={`${i}-${subtask}`} label={subtask} />;
         })}
       </ul>
 
