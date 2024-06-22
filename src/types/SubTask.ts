@@ -1,3 +1,3 @@
 import { Task } from "./Task";
 
-export interface SubTask extends Task {}
+export default interface SubTaskType extends Task {}
