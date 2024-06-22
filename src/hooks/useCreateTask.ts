@@ -19,6 +19,7 @@ const useCreateTask = () => {
       await addDoc(collection(db, TASK_COLLECTION), {
         label,
         status: STATUS.TO_DO,
+        subTasks: [],
         createdAt: now,
         createdBy: userId,
       });
