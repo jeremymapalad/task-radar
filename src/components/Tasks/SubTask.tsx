@@ -1,14 +1,19 @@
 import Button from "@ui/Button";
 import { PlusIcon } from "@heroicons/react/24/solid";
 import SubTaskItem from "./SubTaskItem";
-import { SAMPLE_SUBTASK_LIST } from "@utils/constants";
+import SubTaskType from "@/types/SubTask";
+import { PropsWithChildren } from "react";
 
-function SubTask() {
+interface SubTaskProps extends PropsWithChildren {
+  subTasks: SubTaskType[];
+}
+
+function SubTask({ subTasks }: SubTaskProps) {
   return (
     <>
       <ul>
-        {SAMPLE_SUBTASK_LIST.map((subtask, i) => {
-          return <SubTaskItem key={`${i}-${subtask}`} label={subtask} />;
+        {subTasks.map((subtask, i) => {
+          return <SubTaskItem key={`${i}-${subtask}`} label={subtask.label} />;
         })}
       </ul>
 

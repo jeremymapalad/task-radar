@@ -9,7 +9,15 @@ import useDeleteTask from "@hooks/useDeleteTask";
 import useUpdateTask from "@hooks/useUpdateTask";
 import SubTask from "./SubTask";
 
-const TaskItem = ({ id, label, status, createdAt }: Task) => {
+interface TaskItemProps extends Task {}
+
+const TaskItem = ({
+  id,
+  label,
+  status,
+  createdAt,
+  subTasks,
+}: TaskItemProps) => {
   const { deleteTask } = useDeleteTask();
   const { updateTask } = useUpdateTask();
   const [currentStatus, setCurrentStatus] = useState<string>(status);
@@ -29,7 +37,7 @@ const TaskItem = ({ id, label, status, createdAt }: Task) => {
 
       <div className="mt-auto">
         <div className="mt-4">
-          <SubTask />
+          <SubTask subTasks={subTasks} />
         </div>
 
         <div className="mt-4 pt-4 border-slate-300 border-t-4 flex justify-between">
