@@ -1,3 +1,5 @@
 import { Task } from "./Task";
 
-export default interface SubTaskType extends Task {}
+export default interface SubTaskType extends Task {
+  parentId: string;
+}
