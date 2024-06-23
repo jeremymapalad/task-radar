@@ -1,22 +1,21 @@
-import { Task } from "@/types/Task";
+import TaskType from "@/types/Task";
 import { isArrayEmpty } from "@utils/helpers";
 import TaskItem from "./TaskItem";
 
 interface TaskListProps {
-  tasks?: Task[];
+  tasks?: TaskType[];
 }
 
 const TaskList = ({ tasks = [] }: TaskListProps) => {
   return (
     <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
       {!isArrayEmpty(tasks) ? (
-        tasks.map(({ id, label, status, createdAt, createdBy, subTasks }) => {
+        tasks.map(({ id, label, status, createdAt, createdBy }) => {
           return (
             <TaskItem
               key={id}
               id={id}
               label={label}
-              subTasks={subTasks}
               status={status}
               createdAt={createdAt}
               createdBy={createdBy}
