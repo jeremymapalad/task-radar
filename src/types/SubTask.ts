@@ -1,5 +1,5 @@
-import { Task } from "./Task";
+import TaskType from "./Task";
 
-export default interface SubTaskType extends Task {
+export default interface SubTaskType extends TaskType {
   parentId: string;
 }
