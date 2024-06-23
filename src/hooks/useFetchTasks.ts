@@ -9,13 +9,13 @@ import {
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { TASK_COLLECTION } from "@utils/constants";
-import { Task } from "@/types/Task";
+import TaskType from "@/types/Task";
 import { db } from "@services/firebase/firebase";
 import { useAuth } from "@contexts/authContext";
 
 const useFetchTasks = () => {
   const { userId } = useAuth();
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<TaskType[]>([]);
   const [sortByNewest, setSortByNewest] = useState<boolean>(true);
 
   //For Toggle: Sort By Date feature
