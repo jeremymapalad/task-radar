@@ -5,15 +5,15 @@ import SubTaskType from "@/types/SubTask";
 import { PropsWithChildren } from "react";
 
 interface SubTaskProps extends PropsWithChildren {
-  subTasks: SubTaskType[];
+  subTasks?: SubTaskType[];
 }
 
-function SubTask({ subTasks }: SubTaskProps) {
+function SubTask({ subTasks = [] }: SubTaskProps) {
   return (
     <>
       <ul>
-        {subTasks.map((subtask, i) => {
-          return <SubTaskItem key={`${i}-${subtask}`} label={subtask.label} />;
+        {subTasks.map((subtask) => {
+          return <SubTaskItem key={subtask.id} label={subtask.label} />;
         })}
       </ul>
 

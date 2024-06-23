@@ -2,22 +2,18 @@ import { useState } from "react";
 import Dropdown from "@ui/Dropdown";
 import Button from "@ui/Button";
 import { STATUS } from "@utils/constants";
-import { Task } from "@/types/Task";
+import TaskType from "@/types/Task";
+import SubTask from "./SubTask";
 import { displayFirebaseDate } from "@utils/helpers";
 import { TrashIcon } from "@heroicons/react/24/solid";
 import useDeleteTask from "@hooks/useDeleteTask";
 import useUpdateTask from "@hooks/useUpdateTask";
-import SubTask from "./SubTask";
+import useFetchSubTasks from "@hooks/useFetchSubTasks";
 
-interface TaskItemProps extends Task {}
+interface TaskItemProps extends TaskType {}
 
-const TaskItem = ({
-  id,
-  label,
-  status,
-  createdAt,
-  subTasks,
-}: TaskItemProps) => {
+const TaskItem = ({ id, label, status, createdAt }: TaskItemProps) => {
+  const { subTasks } = useFetchSubTasks(id);
   const { deleteTask } = useDeleteTask();
   const { updateTask } = useUpdateTask();
   const [currentStatus, setCurrentStatus] = useState<string>(status);
@@ -30,6 +26,8 @@ const TaskItem = ({
   const handleOnDelete = () => {
     deleteTask(id);
   };
+
+  console.log("subTasks", subTasks);
 
   return (
     <div className="bg-task rounded-md border-slate-300 border-2 p-5 shadow-xl flex flex-col">

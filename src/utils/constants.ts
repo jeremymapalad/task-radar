@@ -5,6 +5,7 @@ export enum STATUS {
 }
 
 export const TASK_COLLECTION = "tasks";
+export const SUB_TASK_COLLECTION = "subTasks";
 
 export const SAMPLE_SUBTASK_LIST = [
   "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
